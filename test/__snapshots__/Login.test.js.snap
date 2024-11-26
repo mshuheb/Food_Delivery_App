@@ -1,0 +1,1549 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login /> allows user to input email and password 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "marginTop": 50,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Food App
+    </Text>
+  </View>
+  <View
+    onLayout={[Function]}
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "red",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "marginTop": 12,
+          }
+        }
+      >
+        Log in to your account
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "marginTop": 70,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#E0E0E0",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "gap": 5,
+            "marginTop": 30,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <MaterialIcons
+          color="gray"
+          name="email"
+          size={24}
+          style={
+            {
+              "marginLeft": 8,
+            }
+          }
+        />
+        <TextInput
+          keyboardType="email-address"
+          onChangeText={[Function]}
+          placeholder="Enter your email"
+          style={
+            {
+              "color": "gray",
+              "marginVertical": 10,
+              "width": 300,
+            }
+          }
+          value="test@example.com"
+        />
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#E0E0E0",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "gap": 5,
+            "marginTop": 30,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <AntDesign
+          color="black"
+          name="lock1"
+          size={24}
+          style={
+            {
+              "marginLeft": 8,
+            }
+          }
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Enter your password"
+          secureTextEntry={true}
+          style={
+            {
+              "color": "gray",
+              "marginVertical": 10,
+              "width": 300,
+            }
+          }
+          value="password123"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginTop": 12,
+        }
+      }
+    >
+      <Text>
+        Keep me Logged In
+      </Text>
+      <Text>
+        Forgot Password
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "backgroundColor": "#fd5c63",
+          "borderRadius": 6,
+          "marginLeft": "auto",
+          "marginRight": "auto",
+          "marginTop": 50,
+          "padding": 15,
+          "width": 200,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        Login
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "marginTop": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "gray",
+            "fontSize": 16,
+            "textAlign": "center",
+          }
+        }
+      >
+        Don't have an account? Sign Up
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`<Login /> navigates to home screen on successful login 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "marginTop": 50,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Food App
+    </Text>
+  </View>
+  <View
+    onLayout={[Function]}
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "red",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "marginTop": 12,
+          }
+        }
+      >
+        Log in to your account
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "marginTop": 70,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#E0E0E0",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "gap": 5,
+            "marginTop": 30,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <MaterialIcons
+          color="gray"
+          name="email"
+          size={24}
+          style={
+            {
+              "marginLeft": 8,
+            }
+          }
+        />
+        <TextInput
+          keyboardType="email-address"
+          onChangeText={[Function]}
+          placeholder="Enter your email"
+          style={
+            {
+              "color": "gray",
+              "marginVertical": 10,
+              "width": 300,
+            }
+          }
+          value="test@example.com"
+        />
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#E0E0E0",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "gap": 5,
+            "marginTop": 30,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <AntDesign
+          color="black"
+          name="lock1"
+          size={24}
+          style={
+            {
+              "marginLeft": 8,
+            }
+          }
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Enter your password"
+          secureTextEntry={true}
+          style={
+            {
+              "color": "gray",
+              "marginVertical": 10,
+              "width": 300,
+            }
+          }
+          value="password123"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginTop": 12,
+        }
+      }
+    >
+      <Text>
+        Keep me Logged In
+      </Text>
+      <Text>
+        Forgot Password
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "backgroundColor": "#fd5c63",
+          "borderRadius": 6,
+          "marginLeft": "auto",
+          "marginRight": "auto",
+          "marginTop": 50,
+          "padding": 15,
+          "width": 200,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        Login
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "marginTop": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "gray",
+            "fontSize": 16,
+            "textAlign": "center",
+          }
+        }
+      >
+        Don't have an account? Sign Up
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`<Login /> redirects to home if user is already logged in 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "marginTop": 50,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Food App
+    </Text>
+  </View>
+  <View
+    onLayout={[Function]}
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "red",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "marginTop": 12,
+          }
+        }
+      >
+        Log in to your account
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "marginTop": 70,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#E0E0E0",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "gap": 5,
+            "marginTop": 30,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <MaterialIcons
+          color="gray"
+          name="email"
+          size={24}
+          style={
+            {
+              "marginLeft": 8,
+            }
+          }
+        />
+        <TextInput
+          keyboardType="email-address"
+          onChangeText={[Function]}
+          placeholder="Enter your email"
+          style={
+            {
+              "color": "gray",
+              "marginVertical": 10,
+              "width": 300,
+            }
+          }
+          value=""
+        />
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#E0E0E0",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "gap": 5,
+            "marginTop": 30,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <AntDesign
+          color="black"
+          name="lock1"
+          size={24}
+          style={
+            {
+              "marginLeft": 8,
+            }
+          }
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Enter your password"
+          secureTextEntry={true}
+          style={
+            {
+              "color": "gray",
+              "marginVertical": 10,
+              "width": 300,
+            }
+          }
+          value=""
+        />
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginTop": 12,
+        }
+      }
+    >
+      <Text>
+        Keep me Logged In
+      </Text>
+      <Text>
+        Forgot Password
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "backgroundColor": "#fd5c63",
+          "borderRadius": 6,
+          "marginLeft": "auto",
+          "marginRight": "auto",
+          "marginTop": 50,
+          "padding": 15,
+          "width": 200,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        Login
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "marginTop": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "gray",
+            "fontSize": 16,
+            "textAlign": "center",
+          }
+        }
+      >
+        Don't have an account? Sign Up
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`<Login /> redirects to sign-up screen on 'Sign Up' press 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "marginTop": 50,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Food App
+    </Text>
+  </View>
+  <View
+    onLayout={[Function]}
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "red",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "marginTop": 12,
+          }
+        }
+      >
+        Log in to your account
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "marginTop": 70,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#E0E0E0",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "gap": 5,
+            "marginTop": 30,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <MaterialIcons
+          color="gray"
+          name="email"
+          size={24}
+          style={
+            {
+              "marginLeft": 8,
+            }
+          }
+        />
+        <TextInput
+          keyboardType="email-address"
+          onChangeText={[Function]}
+          placeholder="Enter your email"
+          style={
+            {
+              "color": "gray",
+              "marginVertical": 10,
+              "width": 300,
+            }
+          }
+          value=""
+        />
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#E0E0E0",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "gap": 5,
+            "marginTop": 30,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <AntDesign
+          color="black"
+          name="lock1"
+          size={24}
+          style={
+            {
+              "marginLeft": 8,
+            }
+          }
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Enter your password"
+          secureTextEntry={true}
+          style={
+            {
+              "color": "gray",
+              "marginVertical": 10,
+              "width": 300,
+            }
+          }
+          value=""
+        />
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginTop": 12,
+        }
+      }
+    >
+      <Text>
+        Keep me Logged In
+      </Text>
+      <Text>
+        Forgot Password
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "backgroundColor": "#fd5c63",
+          "borderRadius": 6,
+          "marginLeft": "auto",
+          "marginRight": "auto",
+          "marginTop": 50,
+          "padding": 15,
+          "width": 200,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        Login
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "marginTop": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "gray",
+            "fontSize": 16,
+            "textAlign": "center",
+          }
+        }
+      >
+        Don't have an account? Sign Up
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`<Login /> renders correctly with initial UI elements 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "marginTop": 50,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Food App
+    </Text>
+  </View>
+  <View
+    onLayout={[Function]}
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "red",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "marginTop": 12,
+          }
+        }
+      >
+        Log in to your account
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "marginTop": 70,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#E0E0E0",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "gap": 5,
+            "marginTop": 30,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <MaterialIcons
+          color="gray"
+          name="email"
+          size={24}
+          style={
+            {
+              "marginLeft": 8,
+            }
+          }
+        />
+        <TextInput
+          keyboardType="email-address"
+          onChangeText={[Function]}
+          placeholder="Enter your email"
+          style={
+            {
+              "color": "gray",
+              "marginVertical": 10,
+              "width": 300,
+            }
+          }
+          value=""
+        />
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#E0E0E0",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "gap": 5,
+            "marginTop": 30,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <AntDesign
+          color="black"
+          name="lock1"
+          size={24}
+          style={
+            {
+              "marginLeft": 8,
+            }
+          }
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Enter your password"
+          secureTextEntry={true}
+          style={
+            {
+              "color": "gray",
+              "marginVertical": 10,
+              "width": 300,
+            }
+          }
+          value=""
+        />
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginTop": 12,
+        }
+      }
+    >
+      <Text>
+        Keep me Logged In
+      </Text>
+      <Text>
+        Forgot Password
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "backgroundColor": "#fd5c63",
+          "borderRadius": 6,
+          "marginLeft": "auto",
+          "marginRight": "auto",
+          "marginTop": 50,
+          "padding": 15,
+          "width": 200,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        Login
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "marginTop": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "gray",
+            "fontSize": 16,
+            "textAlign": "center",
+          }
+        }
+      >
+        Don't have an account? Sign Up
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`<Login /> shows alert on login error 1`] = `
+<RCTSafeAreaView
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "white",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      {
+        "marginTop": 50,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "textAlign": "center",
+        }
+      }
+    >
+      Food App
+    </Text>
+  </View>
+  <View
+    onLayout={[Function]}
+  >
+    <View
+      style={
+        {
+          "alignItems": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "red",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "marginTop": 12,
+          }
+        }
+      >
+        Log in to your account
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "marginTop": 70,
+        }
+      }
+    >
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#E0E0E0",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "gap": 5,
+            "marginTop": 30,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <MaterialIcons
+          color="gray"
+          name="email"
+          size={24}
+          style={
+            {
+              "marginLeft": 8,
+            }
+          }
+        />
+        <TextInput
+          keyboardType="email-address"
+          onChangeText={[Function]}
+          placeholder="Enter your email"
+          style={
+            {
+              "color": "gray",
+              "marginVertical": 10,
+              "width": 300,
+            }
+          }
+          value="wrong@example.com"
+        />
+      </View>
+      <View
+        style={
+          {
+            "alignItems": "center",
+            "backgroundColor": "#E0E0E0",
+            "borderRadius": 5,
+            "flexDirection": "row",
+            "gap": 5,
+            "marginTop": 30,
+            "paddingVertical": 5,
+          }
+        }
+      >
+        <AntDesign
+          color="black"
+          name="lock1"
+          size={24}
+          style={
+            {
+              "marginLeft": 8,
+            }
+          }
+        />
+        <TextInput
+          onChangeText={[Function]}
+          placeholder="Enter your password"
+          secureTextEntry={true}
+          style={
+            {
+              "color": "gray",
+              "marginVertical": 10,
+              "width": 300,
+            }
+          }
+          value="wrongpassword"
+        />
+      </View>
+    </View>
+    <View
+      style={
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+          "marginTop": 12,
+        }
+      }
+    >
+      <Text>
+        Keep me Logged In
+      </Text>
+      <Text>
+        Forgot Password
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "backgroundColor": "#fd5c63",
+          "borderRadius": 6,
+          "marginLeft": "auto",
+          "marginRight": "auto",
+          "marginTop": 50,
+          "padding": 15,
+          "width": 200,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "white",
+            "fontSize": 16,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          }
+        }
+      >
+        Login
+      </Text>
+    </View>
+    <View
+      accessibilityState={
+        {
+          "busy": undefined,
+          "checked": undefined,
+          "disabled": undefined,
+          "expanded": undefined,
+          "selected": undefined,
+        }
+      }
+      accessibilityValue={
+        {
+          "max": undefined,
+          "min": undefined,
+          "now": undefined,
+          "text": undefined,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        {
+          "marginTop": 15,
+        }
+      }
+    >
+      <Text
+        style={
+          {
+            "color": "gray",
+            "fontSize": 16,
+            "textAlign": "center",
+          }
+        }
+      >
+        Don't have an account? Sign Up
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
