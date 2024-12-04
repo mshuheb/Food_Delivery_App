@@ -14,19 +14,21 @@ const start = () => {
     Animated.parallel([
       Animated.timing(fadeAnim, {
         toValue: 1,
-        duration: 2000, // 5 seconds duration
+        duration: 2000, // 2 seconds duration
         useNativeDriver: true,
       }),
       Animated.timing(scaleAnim, {
         toValue: 1,
-        duration: 2000, // 5 seconds duration
+        duration: 2000, // 2 seconds duration
         useNativeDriver: true,
       }),
     ]).start(() => {
       // After animation, redirect to login page
-      router.push('/login');
+      // Use router.replace to avoid splash screen in the stack
+      router.replace('/login');
     });
   }, []);
+  
 
   return (
     <Pressable style={{ flex: 1 }}>

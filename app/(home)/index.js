@@ -7,74 +7,78 @@ import {
   TextInput,
   Image,
 } from "react-native";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import * as Location from "expo-location";
-//import * as LocationGeocoding from "expo-location";
 import { Octicons, Ionicons } from "@expo/vector-icons";
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign, MaterialIcons } from "@expo/vector-icons";
 import Carousel from "../../components/Carousel";
 import Categories from "../../components/Categories";
 import Hotel from "../../components/Hotel";
 import { supabase } from "../../supabase";
-import { MaterialIcons } from "@expo/vector-icons";
 import { useDarkMode } from "../../DarkModeContext";
 import { useRouter } from "expo-router";
 import getStyles from "../../styles/indexStyles";
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useFocusEffect } from "@react-navigation/native";
 
-const index = () => {
+const Index = () => {
   const { isDarkMode, setIsDarkMode } = useDarkMode();
   const styles = getStyles(isDarkMode);
   const router = useRouter();
 
   const [locationServicesEnabled, setLocationServicesEnabled] = useState(false);
   const [displayCurrentAddress, setDisplayCurrentAddress] = useState(
-    "fetching your location ..."
+    "Fetching your location..."
   );
   const [data, setData] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
   const [userEmail, setUserEmail] = useState("");
 
-  useEffect(() => {
-    const fetchUserEmail = async () => {
-      try {
-        const email = await AsyncStorage.getItem("userEmail");
-        if (email) {
-          setUserEmail(email);
+  // Fetch user email from AsyncStorage
+  useFocusEffect(
+    useCallback(() => {
+      const fetchUserEmail = async () => {
+        try {
+          const email = await AsyncStorage.getItem("userEmail");
+          if (email) {
+            setUserEmail(email);
+          }
+        } catch (error) {
+          console.log("Error fetching user email:", error);
         }
-      } catch (error) {
-        console.log("Error fetching user email:", error);
-      }
-    };
-    fetchUserEmail();
-  }, []);
+      };
+      fetchUserEmail();
+    }, [])
+  );
 
-  useEffect(() => {
-    const fetchUserProfile = async () => {
-      if (!userEmail) return;
-      try {
-        const { data, error } = await supabase
-          .from("user_details")
-          .select("gender, email")
-          .eq("email", userEmail)
-          .single();
+  // Fetch user profile (gender and avatar) from Supabase
+  useFocusEffect(
+    useCallback(() => {
+      const fetchUserProfile = async () => {
+        if (!userEmail) return;
+        try {
+          const { data, error } = await supabase
+            .from("user_details")
+            .select("gender, email")
+            .eq("email", userEmail)
+            .single();
 
-        if (error) {
-          console.log("Error fetching user details:", error);
-          return;
+          if (error) {
+            console.log("Error fetching user details:", error);
+            return;
+          }
+
+          if (data) {
+            const avatarPath = data.gender === "male" ? "male" : "female";
+            setSelectedImage(avatarPath);
+          }
+        } catch (error) {
+          console.log("Error fetching user profile:", error);
         }
-
-        if (data) {
-          const avatarPath = data.gender === "male" ? "male" : "female";
-          setSelectedImage(avatarPath);
-        }
-      } catch (error) {
-        console.log("Error fetching user profile:", error);
-      }
-    };
-
-    fetchUserProfile();
-  }, [userEmail]);
+      };
+      fetchUserProfile();
+    }, [userEmail])
+  );
 
   useEffect(() => {
     CheckIfLocationEnabled();
@@ -114,7 +118,6 @@ const index = () => {
         accuracy: Location.Accuracy.High,
       });
 
-      console.log(location);
       const { coords } = location;
       if (coords) {
         const { latitude, longitude } = coords;
@@ -135,6 +138,31 @@ const index = () => {
       console.error("Error fetching location: ", error);
       Alert.alert("Error", "Could not fetch location");
     }
+  };
+
+  // Fetch hotels from Supabase
+  useFocusEffect(
+    useCallback(() => {
+      const fetchData = async () => {
+        try {
+          const { data, error } = await supabase.from("hotels").select("*");
+          if (error) {
+            console.error("Error fetching hotels:", error);
+          } else {
+            setData(data);
+          }
+        } catch (error) {
+          console.error("Error in fetchData:", error);
+        }
+      };
+      fetchData();
+    }, [])
+  );
+
+  const avatarImages = {
+    male: require("../../assets/male.jpg"),
+    female: require("../../assets/female.png"),
+    default: require("../../assets/profpic.jpg"),
   };
   console.log("my address", displayCurrentAddress);
   const recommended = [
@@ -544,31 +572,6 @@ const index = () => {
   //     },
   //   ];
 
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const { data, error } = await supabase.from("hotels").select("*");
-        console.log("Data:", data);
-        if (error) {
-          console.error("Error fetching data:", error);
-        } else {
-          setData(data);
-        }
-      } catch (error) {
-        console.error("Error in fetchData:", error);
-      }
-    }
-
-    fetchData();
-  }, []);
-
-  console.log("data", data);
-  const avatarImages = {
-    male: require("../../assets/male.jpg"),
-    female: require("../../assets/female.png"),
-    default: require("../../assets/profpic.jpg"), // Default avatar if no gender is set
-  };
-
   return (
     <ScrollView style={styles.container}>
       <View style={styles.header}>
@@ -585,7 +588,10 @@ const index = () => {
           />
         </Pressable>
 
-        <Pressable style={styles.switchContainer} onPress={() => router.push("/profile")}>
+        <Pressable
+          style={styles.switchContainer}
+          onPress={() => router.push("/profile")}
+        >
           <Image
             source={selectedImage ? avatarImages[selectedImage] : avatarImages.default}
             style={styles.avatar}
@@ -603,11 +609,10 @@ const index = () => {
       </View>
 
       <Carousel />
-
       <Categories />
 
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {recommended?.map((item, index) => (
+        {recommended.map((item, index) => (
           <View key={index} style={styles.card}>
             <Image
               style={{
@@ -617,17 +622,17 @@ const index = () => {
                 borderTopLeftRadius: 8,
                 borderBottomLeftRadius: 7,
               }}
-              source={{ uri: item?.image }}
+              source={{ uri: item.image }}
             />
             <View style={{ padding: 10, flexDirection: "column" }}>
-              <Text style={styles.cardText}>{item?.name}</Text>
-              <Text style={styles.cardSubText}>{item?.type}</Text>
+              <Text style={styles.cardText}>{item.name}</Text>
+              <Text style={styles.cardSubText}>{item.type}</Text>
               <View
                 style={{ flexDirection: "row", alignItems: "center", gap: 3 }}
               >
                 <Ionicons name="time-outline" size={24} color="green" />
                 <Text style={{ color: isDarkMode ? "#ffffff" : "#000000" }}>
-                  {item?.time} mins
+                  {item.time} mins
                 </Text>
               </View>
             </View>
@@ -638,14 +643,11 @@ const index = () => {
       <Text style={styles.exploreText}>EXPLORE</Text>
 
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        {items?.map((item, index) => (
+        {items.map((item, index) => (
           <View key={index} style={styles.smallCard}>
-            <Image
-              style={{ width: 50, height: 50 }}
-              source={{ uri: item?.image }}
-            />
-            <Text style={styles.smallCardText}>{item?.name}</Text>
-            <Text style={styles.smallCardSubText}>{item?.description}</Text>
+            <Image style={{ width: 50, height: 50 }} source={{ uri: item.image }} />
+            <Text style={styles.smallCardText}>{item.name}</Text>
+            <Text style={styles.smallCardSubText}>{item.description}</Text>
           </View>
         ))}
       </ScrollView>
@@ -658,11 +660,11 @@ const index = () => {
           backgroundColor: isDarkMode ? "#000" : "#FFF",
         }}
       >
-        {data?.map((item, index) => (
+        {data.map((item, index) => (
           <Hotel
             key={index}
             item={item}
-            menu={item?.menu}
+            menu={item.menu}
             isDarkMode={isDarkMode}
           />
         ))}
@@ -671,4 +673,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Index;
